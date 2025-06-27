@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Blog Personnel</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <div class="top" id="top">
+        <div class="nav">
+            <nav>
+                <li><a href="../site web/index.html">Accueil</a></li>
+                <li><a href="../site web/blog.html">My Blog</a></li>
+                <li><a href="../site web/flexbox.html">FlexBox</a></li>
+                <li><a href="../site web/grid.html">GridBox</a></li>
+            </nav>
+        </div>
+    </div>
+    <!-- En-tête avec bannière -->
+    <header>
+        <div class="banner">
+            <img src="../site web/media/image/OIP.jpg" alt="Photo de profil">
+            <h1>ATANGANA OWONA JOYCE MAGALI</h1>
+            <p>Étudiante à Keyce Informatique et IA</p>
+        </div>
+    </header>
+
+    <!-- Section À propos -->
+    <section id="about" class="fade-in">
+        <h2>À propos de moi</h2>
+        <p>Je suis une étudiante passionné par les Mangas,jeux video,la lecture et l'Architecture BigData...</p>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="fade-in">
+        <h2>Compétences</h2>
+        <div class="badges">
+            <span class="badge">Outils Microsoft</span>
+            <span class="badge">C</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Python</span>
+            <span class="badge">PostgreSQL</span>
+			<span class="badge">Anglais</span >
+        </div>
+    </section>
+
+    <!-- Section Projets Récents -->
+    <section id="projects" class="fade-in">
+        <h2>Projets Récents</h2>
+        <div class="project">
+            <h3>Gestion de Stock </h3>
+            <p>Application de gestion des stagaire en langage C...</p>
+        </div>
+        <div class="project">
+            <h3>Plateforme de communication</h3>
+            <p>Application web en HTML, CSS et JavaScript...</p>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:tonemail@example.com">owonamagali@gmail.com</a></p>
+        <p>Whatsapp: <a href="#">+237692125893/tonprofil</a></p>
+  
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2025 Mon Blog - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Animation au défilement
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".fade-in");
+
+            function fadeInOnScroll() {
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.9) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", fadeInOnScroll);
+            fadeInOnScroll(); // Exécuter au chargement de la page
+        });
+    </script>
+
+</body>
+</html>
